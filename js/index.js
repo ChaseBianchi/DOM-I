@@ -45,13 +45,25 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 //  NAV
-const navBar = document.querySelectorAll('nav a');
+const navBar = document.querySelectorAll('a');
 navBar[0].textContent = 'Services';
 navBar[1].textContent = 'Product';
 navBar[2].textContent = 'Vision';
 navBar[3].textContent = 'Features';
 navBar[4].textContent = 'About';
 navBar[5].textContent = 'Contact';
+
+const navi = document.querySelector('nav');
+const item1 = document.createElement('a');
+item1.textContent = 'Item 1';
+item1.href = '#';
+navi.prepend(item1);
+const item2 = document.createElement('a');
+item2.textContent = 'Item 2';
+item2.href = '#';
+navi.appendChild(item2);
+
+navBar.forEach(link => link.style.color='green');
 
 //  TOP SECTION
 const topSection = document.querySelector('.cta');
